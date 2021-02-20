@@ -12,12 +12,12 @@ function Index({ stars }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch('https://api.github.com/repos/vercel/next.js')
+  const res = await fetch('https://scdhub.org/api/peacewater_forms.json')
   const json = await res.json()
 
   return {
     props: {
-      stars: json.stargazers_count,
+      stars: json[0].Name_of_System,
     },
   }
 }
